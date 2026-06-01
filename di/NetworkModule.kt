@@ -53,4 +53,16 @@ object NetworkModule {
     fun provideProductApi(retrofit: Retrofit): ProductApi {
         return retrofit.create(ProductApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideOrderApi(retrofit: Retrofit): OrderApi {
+        return retrofit.create(OrderApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideUserApi(retrofit: Retrofit): UserApi {
+        return retrofit.create(UserApi::class.java)
+    }
 }
